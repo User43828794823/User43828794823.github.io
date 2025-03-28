@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Free Website</title>
+    <title>try to ddos my site</title>
 </head>
 <body>
-    <h1>Welcome to My Free Website!</h1>
-    <p>This is a simple site hosted for free on GitHub Pages.</p>
+    <h1>try to DDOS</h1>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Traffic Counter</title>
+    <script>
+        function updateCounter() {
+            // Create a new XMLHttpRequest
+            var xhr = new XMLHttpRequest();
+            
+            // Specify the request type and URL to fetch the counter data
+            xhr.open("GET", "counter.php", true);
+            
+            // Define what happens when the server responds
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    // Update the page with the new count
+                    document.getElementById("visitor-count").innerHTML = xhr.responseText;
+                }
+            };
+            
+            // Send the request
+            xhr.send();
+        }
+
+        // Update the counter every 5 seconds
+        setInterval(updateCounter, 5000);
+    </script>
+</head>
+<body>
+    <h1>Live Traffic Counter</h1>
+    <p>Current Visitors: <span id="visitor-count">Loading...</span></p>
+
+    <script>
+        // Initially load the counter
+        updateCounter();
+    </script>
 </body>
 </html>
